@@ -55,16 +55,12 @@ def update_p(letter,p,m):              #modification 3.1
     
     if letter in Haut_Bas:
         p["x"]+=Haut_Bas[letter]
-        if p["x"]<0 or p["x"]>=len(m):
-            p["x"]-=Haut_Bas[letter]
-        if m[p["x"]][p["y"]]=="#":
+        if p["x"]<0 or p["x"]>=len(m) or m[p["x"]][p["y"]]=="#":
             p["x"]-=Haut_Bas[letter]
     if letter in Gauche_Droite:
         p["y"]+=Gauche_Droite[letter]
-        if p["y"]<0 or p["y"]>=len(m[0]):
-            p["y"]-=Gauche_Droite[letter]
-        if m[p["x"]][p["y"]]=="#":
-            p["y"]-=Gauche_Droite[letter]    
+        if p["y"]<0 or p["y"]>=len(m[0]) or m[p["x"]][p["y"]]=="#":
+            p["y"]-=Gauche_Droite[letter] 
     return p
 
 
