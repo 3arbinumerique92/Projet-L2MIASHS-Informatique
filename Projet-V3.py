@@ -65,7 +65,7 @@ def update_p(letter,p):
 while True:
     letter=input("Quel déplacement? ”z” (haut), ”q” (gauche), ”s” (bas), et ”d” (droite):")  
     p=update_p(letter,p)
-    map = [[0,0,0, 1,1], [0,0,0,0,1,],[1,1,0,0,0,], [0,0,0,0,0]]
+    map = [[0,0,0, 1,1], [0,0,0,0,1,],[1,1,0,0,0,], [0,0,0,0,0]]                            #ajouter une fonction qui remplace ce truc bien loooooong
     map=display_map(map, dico)
     for i in range(len(map)):
         for j in range(len(map[i])):
