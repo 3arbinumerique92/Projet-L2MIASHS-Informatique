@@ -66,11 +66,13 @@ def update_objects(p, objects):
     
     
 #4)
-for i in range(len(map)):
-    for j in range(len(map[i])):
-        print(display_map_char_and_objects(map, dico, p,objects)[i][j], end=' ')
-    print(" ")
-    
+def printmap(m,d,p):
+    for i in range(len(map)):
+        for j in range(len(map[i])):
+              print(display_map_char_and_objects(map, dico, p,objects)[i][j], end=' ')
+        print(" ")
+
+printmap(map, dico, p)     
 
 #   2.3-Déplacement
 
@@ -101,8 +103,5 @@ while True:
     map = [[0,0,0, 1,1], [0,0,0,0,1,],[1,1,0,0,0,], [0,0,0,0,0]]
     map=display_map(map, dico)
     objects,p = update_objects(p, objects)
-    for i in range(len(map)):
-        for j in range(len(map[i])):
-            print(display_map_char_and_objects(map, dico, p, objects)[i][j], end=' ')
-        print(" ")
+    printmap(map, dico, p) 
     print(p["score"])
